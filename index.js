@@ -6,6 +6,16 @@ import {
   View,
 } from 'react-360';
 
+export class Circle extends React.Component{
+  render(){
+    return (
+      <Text style={styles.circle}>
+        Circle
+      </Text>
+    )
+  }
+}
+
 export default class Hello360 extends React.Component {
   render() {
     return (
@@ -15,7 +25,9 @@ export default class Hello360 extends React.Component {
             Welcome to DCS+
           </Text>
         </View>
+        <Circle></Circle>
       </View>
+      
     );
   }
 };
@@ -38,6 +50,12 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 30,
   },
+  circle : {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    backgroundColor: 'yellow'
+  }
 });
 
 AppRegistry.registerComponent('Hello360', () => Hello360);
